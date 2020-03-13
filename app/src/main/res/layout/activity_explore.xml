@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+          >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="EXPLORE"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                app:tabBackground="@color/colorPrimaryDark"
+                app:tabTextAppearance="@style/ExploreTabText"
+                app:tabTextColor="@color/white"
+                android:elevation="1dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/lin_tab_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabs"
+                android:orientation="vertical"></LinearLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabs" />
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:background="#f8f8f8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+
+            android:id="@+id/explore_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></FrameLayout>
+
+    </LinearLayout>
+
+    <!--  <androidx.recyclerview.widget.RecyclerView
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="120dp"
+          android:id="@+id/explore_recycler"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />  -->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

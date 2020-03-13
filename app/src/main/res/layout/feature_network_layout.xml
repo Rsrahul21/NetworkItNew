@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="200dp"
+    android:layout_marginLeft="22dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="5dp"
+    android:background="#f8f8f8"
+    android:orientation="vertical"
+    android:id="@+id/container">
+
+
+    <LinearLayout
+        android:id="@+id/rel_mainmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img01"></ImageView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            >
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                 android:layout_marginTop="10dp"
+                android:text="Text2"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/bussiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_title"
+                android:layout_centerVertical="true"
+                 android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Text1"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+              android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp"
+                 android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:maxLines="2"
+                android:text="Location"
+                android:textColor="#998B8B"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/date" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="date"
+            android:textColor="#998B8B"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+  <!--  <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right"
+         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/heart"
+        android:id="@+id/favt"/> -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="5"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:stepSize="1.0" />
+
+
+</androidx.cardview.widget.CardView>

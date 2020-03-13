@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.networkit">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="Activity.EditProfileActivity"></activity>
+        <activity android:name="Activity.HomeActivity">
+
+        </activity>
+        <activity android:name="Activity.MeetingActivity" />
+        <activity android:name="Activity.EventDetailsActivity" />
+        <activity android:name="Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Activity.AllFeaturedEventActivity" />
+        <activity android:name="Activity.AllFeaturedNetworkActivity" />
+        <activity android:name="Activity.CalendarActivity" />
+        <activity android:name="Activity.EventUploadActivity" />
+        <activity android:name="Activity.ExploreActivity" />
+        <activity android:name="Activity.SearchActivity" />
+        <activity android:name="Activity.RegisterActivity" />
+        <activity android:name="Activity.NetworkGroupDetailsActivity" />
+        <activity android:name="Activity.SignInActivity" />
+        <activity android:name="Activity.SignUpActivity" />
+        <activity android:name="Activity.MainActivity" />
+    </application>
+
+</manifest>

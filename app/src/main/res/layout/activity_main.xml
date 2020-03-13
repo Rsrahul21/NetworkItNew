@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical"
+    tools:context="Activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_meetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:text="MEETINGS"
+            android:textSize="20dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:elevation="0.5dp"
+        app:compactCalendarBackgroundColor="@color/white"
+        app:compactCalendarCurrentDayBackgroundColor="#81B5EB"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#E67E7E"
+        app:compactCalendarDisplayOtherMonthDays="true"
+        app:compactCalendarEventIndicatorStyle="small_indicator"
+        app:compactCalendarMultiEventIndicatorColor="#54CF1F"
+        app:compactCalendarOtherMonthDaysTextColor="#999999"
+        app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="false"
+        app:compactCalendarTextColor="#090808"
+        app:compactCalendarTextSize="15sp"
+        tools:ignore="MissingConstraints"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Events"
+        android:textColor="#292929"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_calendar_events"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+         android:orientation="horizontal">
+
+         <Button
+             android:layout_width="15dp"
+             android:layout_height="15dp"
+             android:layout_marginLeft="15dp"
+             android:layout_marginTop="5dp"
+             android:background="@drawable/round_button_bg1"
+             android:textColor="@color/white"
+             android:textSize="10dp" />
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginTop="5dp"
+                 android:text="Meetings"
+                 android:textColor="#292929"
+
+                 android:textSize="17dp"
+
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:text="December 14-16,2019"
+
+
+                 />
+         </LinearLayout>
+
+         <Button
+             android:layout_width="60dp"
+             android:layout_height="25dp"
+             android:layout_marginLeft="120dp"
+             android:layout_marginTop="10dp"
+             android:background="@drawable/round_button_bg1"
+             android:text="12:20"
+             android:textColor="@color/white"
+             android:textSize="10dp" />
+
+         <ImageView
+             android:layout_width="19dp"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:layout_marginTop="8dp"
+             android:src="@drawable/rightarrow" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+         android:orientation="horizontal">
+
+         <Button
+             android:layout_width="15dp"
+             android:layout_height="15dp"
+             android:layout_marginLeft="15dp"
+             android:layout_marginTop="5dp"
+             android:background="@drawable/round_button_bg"
+             android:textColor="@color/white"
+             android:textSize="10dp" />
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginTop="5dp"
+                 android:text="Lorem Lpsum"
+                 android:textColor="#292929"
+
+                 android:textSize="17dp"
+
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:text="December 14-16,2019"
+
+
+                 />
+         </LinearLayout>
+
+         <Button
+             android:layout_width="60dp"
+             android:layout_height="25dp"
+             android:layout_marginLeft="120dp"
+             android:layout_marginTop="10dp"
+             android:background="@drawable/round_button_bg"
+             android:text="17:00"
+             android:textColor="@color/white"
+             android:textSize="10dp" />
+
+         <ImageView
+             android:layout_width="20dp"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:layout_marginTop="8dp"
+             android:src="@drawable/rightarrow" />
+     </LinearLayout> -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
